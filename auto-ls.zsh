@@ -6,7 +6,7 @@ if (( ! ${+AUTO_LS_CHPWD} )); then
 fi
 
 if [[ $#AUTO_LS_COMMANDS -eq 0 ]]; then
-  AUTO_LS_COMMANDS=(ls git-status)
+  AUTO_LS_COMMANDS=(la --group-directories-first git-status)
 fi
 
 if (( ! ${+AUTO_LS_NEWLINE} )); then
