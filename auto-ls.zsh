@@ -19,6 +19,7 @@ fi
 
 auto-ls-la () {
   la --group-directories-first
+  [[ $AUTO_LS_NEWLINE != false ]] && echo ""
 }
 
 auto-ls-ls () {
@@ -50,7 +51,6 @@ auto-ls () {
         auto-ls-$cmd
       fi
     done
-    zle && zle .accept-line
   fi
 
   # Forward this event down the ZLE stack
